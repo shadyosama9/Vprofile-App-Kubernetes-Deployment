@@ -15,7 +15,7 @@ spec:
         app: vpro-app
     spec:
       containers:
-        - name: vprapp
+        - name: vproapp
           image: shady25/vproapp
           ports:
             - name: vproapp-port
