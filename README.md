@@ -52,7 +52,7 @@ Before you begin, ensure you have the following installed:
    Using kubectl
 
    ```sh
-   kubectl label node <node-name> zone=us-east-1
+   kubectl label node <node-name> zone=us-east-1a
    ```
 
 5. **Change The Volume ID**
