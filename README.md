@@ -73,6 +73,8 @@ Before you begin, ensure you have the following installed:
    When You're Done Make Sure To Destroy The Cluster To Avoid Extra Charges
 
    ```sh
+   kubectl delete --recursive -f .
+   
    kops delete cluster --name  mycluster.k8s.local--state=s3://kops-bucket --yes
    ```
 
