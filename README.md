@@ -74,8 +74,8 @@ Before you begin, ensure you have the following installed:
 
    ```sh
    kubectl delete --recursive -f .
-   
-   kops delete cluster --name  mycluster.k8s.local--state=s3://kops-bucket --yes
+
+   kops delete cluster --name  mycluster.k8s.local --state=s3://kops-bucket --yes
    ```
 
 
