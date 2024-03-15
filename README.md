@@ -79,6 +79,6 @@ Before you begin, ensure you have the following installed:
 
 ## Notes
 
-- Replace "mycluster.k8s.local" with your cluster's DNS name.
-- Replace "k8s-bucket" with S3 bucket name.
+- Replace <mycluster.k8s.local> with your cluster's DNS name.
+- Replace <k8s-bucket> with S3 bucket name.
 - Ensure your AWS credentials are configured correctly.
