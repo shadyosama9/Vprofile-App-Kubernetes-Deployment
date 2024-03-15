@@ -29,51 +29,51 @@ Before you begin, ensure you have the following installed:
    ```
 2. **Validate The Cluster**
 
-  Make Sure To Check For The Cluster's Health
+   Make Sure To Check For The Cluster's Health
 
-  ```sh
-  kops validate cluster --name mycluster.k8s.local --state=s3://kops-state-2024
-  ```
+   ```sh
+   kops validate cluster --name mycluster.k8s.local --state=s3://kops-state-2024
+   ```
 
 3. **Create an EBS Volume On AWS For The Database:**
 
-  Using AWS CLi
+   Using AWS CLi
 
-  ```sh
-  aws ec2 create-vloume --availability-zone=us-east-1a --size=3 --volume-type=gp2
-  ```
+   ```sh
+   aws ec2 create-vloume --availability-zone=us-east-1a --size=3 --volume-type=gp2
+   ```
 
 4. **Tag The Volume With The Following Tag:**
 
-  KubernetesCluster = mycluster.k8s.local
+   KubernetesCluster = mycluster.k8s.local
 
 4. **Label The Node In The Same Zone As The Volume:**
   
-  Using kubectl
+   Using kubectl
 
-  ```sh
-  kubectl label node <node-name> zone=us-east-1
-  ```
+   ```sh
+   kubectl label node <node-name> zone=us-east-1
+   ```
 
 5. **Change The Volume ID**
-  Update The Vloume ID in DB/vprodb-deploy.yml With Your Volume ID
+   Update The Vloume ID in DB/vprodb-deploy.yml With Your Volume ID
 
 
 6. **Deploy The App:**
   
-  Using kubectl
+   Using kubectl
 
-  ```sh
-  kubectl apply --recursive -f .
-  ```
+   ```sh
+   kubectl apply --recursive -f .
+   ```
 
 7. **Clean Up**
 
-  When You're Done Make Sure To Destroy The Cluster To Avoid Extra Charges
+   When You're Done Make Sure To Destroy The Cluster To Avoid Extra Charges
 
-  ```sh
-  kops delete cluster --name  mycluster.k8s.local--state=s3://kops-bucket --yes
-  ```
+   ```sh
+   kops delete cluster --name  mycluster.k8s.local--state=s3://kops-bucket --yes
+   ```
 
 
 ## Notes
