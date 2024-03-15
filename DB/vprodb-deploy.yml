@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: shady25/vproapp
+          image: shady25/vprodb
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
@@ -34,7 +34,7 @@ spec:
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
-            volumeID: vol-003672f461c8d478f
+            volumeID: vol-0f3842fca27ee7f69
             fsType: ext4
       initContainers:
         - name: busybox
